@@ -13,7 +13,6 @@
 # limitations under the License.
 
 FROM redis:3.2.9
-
 COPY run.sh /
-
+RUN chmod 777 /run.sh
 CMD /run.sh
