@@ -14,6 +14,8 @@
 
 FROM redis:3.2.9
 COPY run.sh /
+USER 0
 RUN chgrp -R 0 /data && \
     chmod -R g=u /data
+USER redis
 CMD /run.sh
